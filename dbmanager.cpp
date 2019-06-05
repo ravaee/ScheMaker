@@ -20,7 +20,7 @@ DbManager::DbManager(const QString& path)
 
     QSqlQuery qry;
 
-    qry.prepare( "CREATE TABLE IF NOT EXISTS programs (id INTEGER UNIQUE PRIMARY KEY, name VARCHAR(30) NOT NULL, description VARCHAR(30) NOT NULL, day INTEGER NOT NULL, time VARCHAR(30) NOT NULL, color VARCHAR(60)) NOT NULL" );
+    qry.prepare( "CREATE TABLE IF NOT EXISTS programs (id INTEGER UNIQUE PRIMARY KEY, name VARCHAR(30) NOT NULL, description VARCHAR(30) NOT NULL, day INTEGER NOT NULL, time VARCHAR(30) NOT NULL, color VARCHAR(60) NOT NULL) " );
 
     if( !qry.exec() )
         qDebug() << qry.lastError();
