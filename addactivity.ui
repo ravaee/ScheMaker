@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddActivity</class>
+ <widget class="QDialog" name="AddActivity">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>324</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add New Activity</string>
+  </property>
+  <property name="windowOpacity">
+   <double>8.000000000000000</double>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Cancel</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="addActivity_btn">
+     <property name="text">
+      <string>Add</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>DejaVu Sans Condensed</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>Activity Name</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="activityNameText"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Write a Description</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPlainTextEdit" name="ActivityDescriptionText"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <family>DejaVu Sans Condensed</family>
+        </font>
+       </property>
+       <property name="text">
+        <string>Activity Time</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QTimeEdit" name="activityTimeText"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Choose a Day</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="activityDayText">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string comment="1">Saturday</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="2">Sunday</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="3">Mondey</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="4">Tuesday</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="5">Wednesday</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="6">Thursday</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string comment="7">Friday</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="set_color_btn">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 255, 127);
+alternate-background-color: rgb(170, 255, 127);
+selection-background-color: rgb(170, 255, 127);
+color: rgb(0, 0, 0);
+border: 0px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="set_color_btn_2">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(170, 255, 255);
+color: rgb(0, 0, 0);
+border: 0px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="set_color_btn_3">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 170, 0);
+color: rgb(0, 0, 0);
+border: 0px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="set_color_btn_4">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 104, 93);
+color: rgb(0, 0, 0);
+border: 0px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Choose a Color</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
