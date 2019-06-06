@@ -107,6 +107,7 @@ private:
     QList<ActivityWidget*> activityWidgets;
     QList<Activity*> m_activities;
     int shouldNotCleanWidgetId = -1;
+    QWidget *dayToWidget(Days);
 };
 
 #endif // MAINPAGE_H
