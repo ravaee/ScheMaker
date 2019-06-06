@@ -58,6 +58,35 @@ void MainPage::on_actionEdit_triggred()
     }
 }
 
+QWidget *MainPage::dayToWidget(Days day) {
+    QWidget *widget;
+    switch(day) {
+        case Saturday:
+            widget = ui->widget0;
+            break;
+        case Sunday:
+            widget = ui->widget1;
+            break;
+        case Monday:
+            widget = ui->widget2;
+            break;
+        case Tuesday:
+            widget = ui->widget3;
+            break;
+        case Wednesday:
+            widget = ui->widget4;
+            break;
+        case Thursday:
+            widget = ui->widget5;
+            break;
+        case Friday:
+            widget = ui->widget6;
+            break;
+    }
+
+    return widget;
+}
+
 void MainPage::onActivitiesChanged()
 {
 
@@ -77,22 +106,9 @@ void MainPage::onActivitiesChanged()
 
         connect(activityw,SIGNAL(activityEditRequested(Activity*)),this,SLOT(onActivityEdited(Activity*)));
         connect(activityw,SIGNAL(activityDeleteRequested(int)),this,SLOT(onActivityDeleted(int)));
-
-        if(activity->days() == Saturday){
-            ui->widget0->layout()->addWidget(activityw);
-        }else if(activity->days() == Sunday){
-            ui->widget1->layout()->addWidget(activityw);
-        }else if(activity->days() == Monday){
-            ui->widget2->layout()->addWidget(activityw);
-        }else if(activity->days() == Tuesday){
-            ui->widget3->layout()->addWidget(activityw);
-        }else if(activity->days() == Wednesday){
-            ui->widget4->layout()->addWidget(activityw);
-        }else if(activity->days() == Thursday){
-            ui->widget5->layout()->addWidget(activityw);
-        }else if(activity->days() == Friday){
-            ui->widget6->layout()->addWidget(activityw);
-        }
+        // Convert day to Widget & Add widget.
+        this->dayToWidget(activity->days())
+                ->layout()->addWidget(activityw);
 
         activityWidgets.push_back(activityw);
     }
